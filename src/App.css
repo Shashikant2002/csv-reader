@@ -1,0 +1,102 @@
+.csv_reader {
+  border: 2px solid #f9f9f9;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 800px;
+}
+.csv_reader .tab_btns {
+  background: #f9f9f9;
+  display: flex;
+  justify-content: space-around;
+}
+.csv_reader .tab_btns button {
+  width: 30%;
+  border: 1px solid transparent;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  padding: 15px 0;
+  background: #f9f9f9;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #676c70;
+  transition: 0.5s;
+}
+
+.csv_reader .tab_btns button:hover {
+  border-bottom: 3px solid #4b52d7;
+}
+.csv_reader .tab_btns button.active {
+  border-bottom: 3px solid #4b52d7;
+}
+.csv_reader .content {
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.csv_reader .content svg {
+  font-size: 70px;
+  color: #4b52d7;
+}
+.csv_reader .content button {
+  border: 1px solid #4b52d7;
+  font-weight: 600;
+  background: transparent;
+  color: #4b52d7;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.csv_reader .content button:hover {
+  color: #fff;
+  background: #4b52d7;
+}
+.csv_reader .content label {
+  padding: 10px 30px;
+  display: inline-block;
+  cursor: pointer;
+}
+.csv_reader input[type="file"] {
+  display: none;
+}
+
+/* Dropdown Start */
+
+.dropdown {
+  margin: 0 auto;
+  z-index: 10000;
+  width: 300px;
+  position: relative;
+}
+.dropdown,
+.dropdown * {
+  z-index: 999999999;
+}
+.dropdown .dropdown-btn {
+  cursor: pointer;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #777;
+  font-weight: 500;
+}
+.dropdown-content {
+  position: absolute;
+  /* top: 110%; */
+  left: 0;
+  width: 100%;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.07);
+}
+.dropdown-content .item {
+  padding: 10px;
+  cursor: pointer;
+}
+.dropdown-content .item:hover {
+  background: #fcfcfc;
+}
+/* Dropdown End */
