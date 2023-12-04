@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IoFingerPrintSharp } from "react-icons/io5";
+import { IoFingerPrintSharp, IoCloudUploadOutline  } from "react-icons/io5";
 
 const CsvReader = () => {
   const [active, setActive] = useState({ tabBtn: 0, content: 0 });
@@ -122,7 +122,7 @@ const CsvReader = () => {
       </div>
 
       <div className="content">
-        <IoFingerPrintSharp />
+        <IoCloudUploadOutline  />
 
         <div className="chooseFile">
           <button>
