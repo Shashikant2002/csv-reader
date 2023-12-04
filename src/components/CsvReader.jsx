@@ -9,15 +9,17 @@ const CsvReader = () => {
   const [csvFile, setCsvFile] = useState(null);
   const [csvJson, setCsvJson] = useState(null);
 
+  const [check, setCheck] = useState(false);
+
   const button = [
     {
       title: "File",
     },
     {
-      title: "Url",
+      title: "Pending",
     },
     {
-      title: "Search",
+      title: "Completed",
     },
   ];
 
@@ -105,7 +107,7 @@ const CsvReader = () => {
             }}
             className="item"
           >
-            One
+            Buy/Get
           </div>
           <div
             className="item"
@@ -114,16 +116,7 @@ const CsvReader = () => {
               setIsActive(!isActive);
             }}
           >
-            Two
-          </div>
-          <div
-            className="item"
-            onClick={(e) => {
-              setIsSelected(e.target.textContent);
-              setIsActive(!isActive);
-            }}
-          >
-            Three
+            Send/Get
           </div>
         </div>
       </div>
@@ -147,6 +140,29 @@ const CsvReader = () => {
             id="inputFile"
           />
         </div>
+
+        <div className="date">
+          <div className="labal">
+            <input
+              onClick={() => {
+                setCheck(!check);
+              }}
+              type="checkbox"
+              id="checkbox"
+            />
+            <label htmlFor="checkbox">
+              Do you want to schedule this upload?
+            </label>
+          </div>
+          {check ? (
+            <div className="dateTime">
+              <input type="datetime-local" />
+            </div>
+          ) : (
+            ""
+          )}
+        </div>
+
         <button className="submit" onClick={onSubmitHandaler}>
           Submit
         </button>
